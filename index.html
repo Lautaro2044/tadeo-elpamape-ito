@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tadeo el Pampeñito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Tadeo el Pampeñito</h1>
+  <p>Música en vivo para eventos y conciertos</p>
+</header>
+
+<section id="biografia">
+  <h2>Sobre Tadeo</h2>
+
+  <div class="bio-contenido">
+    <div class="bio-foto">
+  <img
+    id="bio-slider"
+    src="fotos/tadeo.jpg"
+    alt="Tadeo El Pampeñito"
+  >
+</div>
+
+
+
+    <div class="bio-texto">
+      <p>
+        <strong>Tadeo “El Pampeñito”</strong> es un joven artista chaqueño que
+        comenzó su camino en la música desde los cinco años, iniciándose en el
+        acordeón. Actualmente es profesor de acordeón a piano y, a comienzos de
+        este año, comenzó a cantar, logrando una rápida evolución artística.
+      </p>
+
+      <p>
+        Ha recorrido distintos escenarios de la región, incluyendo Charata,
+        Sáenz Peña y Resistencia. Su repertorio se centra en la chacarera del
+        monte y el chamamé, estilos que representan profundamente el sentir del
+        folklore chaqueño.
+      </p>
+
+      <p>
+        Además del acordeón, ejecuta bajo, guitarra y otros instrumentos. Cuenta
+        con su propio conjunto de músicos alternativos, bajo la coordinación del
+        profesor <strong>Ángel Ferreyra</strong>, y continúa creando composiciones
+        propias mientras se perfecciona día a día.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<nav class="menu">
+  <a href="#inicio">Inicio</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Reservas</a>
+</nav>
+
+<section id="inicio" class="inicio">
+  <div class="inicio-contenido">
+    <h1>Bienvenidos</h1>
+    <p>Al sitio oficial de Tadeo “El Pampeñito”</p>
+    <a href="#contacto" class="btn-inicio">Reservar show</a>
+  </div>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <ul>
+    <li>🎤 Shows en vivo</li>
+    <li>🎶 Eventos privados</li>
+    <li>🎉 Festivales</li>
+    <li>🎸 Conciertos y peñas</li>
+  </ul>
+</section>
+
+<section id="galeria">
+  <h2>Fotos y Videos</h2>
+
+  <div class="media">
+    <img src="fotos/show1.jpg" alt="Show en vivo">
+<img src="fotos/show2.jpg" alt="Evento">
+<img src="fotos/evento1.jpg" alt="Evento privado">
+
+  </div>
+
+  <div class="video">
+    <iframe width="300" height="200"
+      src="https://www.youtube.com/embed/VIDEO_ID"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section id="contacto" class="reservas">
+  <h2>Reservá tu concierto</h2>
+
+  <div class="reservas-card">
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Lugar del evento" required>
+      <input type="date" required>
+      <textarea placeholder="Mensaje"></textarea>
+
+      <button type="submit" class="btn-reserva">Enviar consulta</button>
+    </form>
+<a
+  href="https://wa.me/5493841409317?text=Hola%20quiero%20reservar%20un%20concierto%20con%20Tadeo%20el%20Pampeñito"
+  class="whatsapp-btn"
+  target="_blank">
+  📲 Reservar por WhatsApp
+</a>
+
+
+  <p id="mensaje"></p>
+</section>
+
+<footer>
+  <p>© 2025 Tadeo el Pampeñito</p>
+</footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
