@@ -80,7 +80,7 @@ header p {
    MENU DE NAVEGACIÓN
 ========================= */
 .menu {
-  position: fixed; /* Mantenerlo fijo */
+  position: fixed; /* menú fijo */
   top: 0;
   left: 0;
   right: 0;
@@ -91,8 +91,8 @@ header p {
   justify-content: center;
   gap: 30px;
   padding: 15px 10px;
-  transition: top 0.3s ease; /* Para animación de entrada/salida */
-  flex-wrap: wrap; /* Para móviles */
+  transition: transform 0.3s ease; /* animación más suave */
+  flex-wrap: wrap;
 }
 
 .menu a {

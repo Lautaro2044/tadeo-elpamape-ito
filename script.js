@@ -90,3 +90,33 @@ window.addEventListener("scroll", function() {
   prevScrollpos = currentScrollPos;
 });
 
+
+
+
+const menu = document.querySelector(".menu");
+let lastScroll = 0;
+
+// Creamos un sentinel invisible al inicio de la página
+const sentinel = document.createElement('div');
+sentinel.style.position = 'absolute';
+sentinel.style.top = '0';
+sentinel.style.width = '1px';
+sentinel.style.height = '1px';
+document.body.prepend(sentinel);
+
+// Observador que detecta scroll hacia abajo o hacia arriba
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.boundingClientRect.y < lastScroll) {
+      // Bajando → ocultar menú
+      menu.style.transform = 'translateY(-100%)';
+    } else {
+      // Subiendo → mostrar menú
+      menu.style.transform = 'translateY(0)';
+    }
+    lastScroll = entry.boundingClientRect.y;
+  });
+}, { threshold: [0] });
+
+observer.observe(sentinel);
+
