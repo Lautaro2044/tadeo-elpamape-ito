@@ -412,3 +412,65 @@ footer {
 }
 
 
+
+
+
+
+/* =========================
+   REDES SOCIALES
+========================= */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.btn-red {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 40px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-red i {
+  font-size: 20px;
+}
+
+/* Instagram */
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+}
+
+/* YouTube */
+.youtube {
+  background: #ff0000;
+}
+
+.btn-red:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* 📱 Celular */
+@media (max-width: 600px) {
+  .btn-red {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
