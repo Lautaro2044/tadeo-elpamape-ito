@@ -55,20 +55,23 @@ if (imagenBio) {
 }
 
 
-let prevScrollpos = window.pageYOffset;
+llet prevScrollpos = window.scrollY || window.pageYOffset;
 const menu = document.querySelector(".menu");
 
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
+window.addEventListener("scroll", function() {
+  let currentScrollPos = window.scrollY || window.pageYOffset;
+  
   if (prevScrollpos > currentScrollPos) {
-    // Si subimos, mostrar menú
+    // Subiendo → mostrar menú
     menu.style.top = "0";
   } else {
-    // Si bajamos, ocultar menú
+    // Bajando → ocultar menú
     menu.style.top = "-80px"; // Ajusta según la altura del menú
   }
+  
   prevScrollpos = currentScrollPos;
-};
+});
+
 
 
 
