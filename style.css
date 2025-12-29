@@ -674,3 +674,62 @@ section::before {
 }
 
 
+
+/* Menú principal */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 10px;
+  flex-wrap: wrap; /* 🔑 Permite que los enlaces bajen de línea si no caben */
+}
+
+/* Enlaces del menú */
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  flex: 1 1 auto; /* 🔑 Hace que los enlaces se distribuyan y ajusten */
+  text-align: center;
+  min-width: 100px; /* Para que no se compriman demasiado */
+}
+
+/* Subrayado animado */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-secundario);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column; /* Los enlaces se apilan verticalmente */
+    gap: 10px;
+  }
+
+  .menu a {
+    font-size: 14px;
+    min-width: auto;
+    padding: 10px 0;
+  }
+}
+
+
+
