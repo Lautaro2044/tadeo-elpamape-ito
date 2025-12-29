@@ -88,6 +88,8 @@ header p {
   }
 }
 
+
+
 /* ===== MOBILE (VERTICAL POR SECCIONES) ===== */
 @media (max-width: 600px) {
   .menu {
@@ -125,6 +127,11 @@ header p {
     display: block;
   }
 }
+
+
+
+
+
 
 /* =========================
    SECCIÓN INICIO
