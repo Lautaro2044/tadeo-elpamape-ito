@@ -103,12 +103,6 @@ header p {
   padding: 6px 12px;
 }
 
-/* 📱 MOBILE: sigue horizontal, no se cae */
-@media (max-width: 600px) {
-  .menu {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
 
   .menu a {
     font-size: 14px;
@@ -718,6 +712,40 @@ section::before {
     font-size: 14px;
     min-width: auto;
     padding: 10px 0;
+  }
+}
+
+
+
+
+/* =========================
+   FIX FINAL MENU MOBILE
+========================= */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  z-index: 1000;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 8px;
+}
+
+.menu a {
+  white-space: nowrap;
+}
+
+/* 📱 Celular: horizontal SIEMPRE */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
