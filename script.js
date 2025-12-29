@@ -55,7 +55,25 @@ if (imagenBio) {
 }
 
 
-llet prevScrollpos = window.scrollY || window.pageYOffset;
+
+
+const flyers = document.querySelectorAll('.flyer-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+flyers.forEach(flyer => observer.observe(flyer));
+
+
+
+let prevScrollpos = window.scrollY || window.pageYOffset;
 const menu = document.querySelector(".menu");
 
 window.addEventListener("scroll", function() {
@@ -72,19 +90,3 @@ window.addEventListener("scroll", function() {
   prevScrollpos = currentScrollPos;
 });
 
-
-
-
-const flyers = document.querySelectorAll('.flyer-card');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, {
-  threshold: 0.2
-});
-
-flyers.forEach(flyer => observer.observe(flyer));
