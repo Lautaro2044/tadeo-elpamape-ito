@@ -1,7 +1,7 @@
 console.log("script.js cargado correctamente");
 
 /* =============================
-   MENÚ: OCULTAR / MOSTRAR SCROLL
+   MENU MOBILE: OCULTAR / MOSTRAR
 ============================= */
 const menu = document.querySelector(".menu");
 let lastScroll = 0;
@@ -9,11 +9,16 @@ let lastScroll = 0;
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (currentScroll > lastScroll && currentScroll > 100) {
-    // Bajando
-    menu.style.transform = "translateY(-100%)";
+  if (window.innerWidth <= 600) {
+    if (currentScroll > lastScroll && currentScroll > 80) {
+      // Bajando → ocultar
+      menu.style.transform = "translateY(-100%)";
+    } else {
+      // Subiendo → mostrar
+      menu.style.transform = "translateY(0)";
+    }
   } else {
-    // Subiendo
+    // Desktop siempre visible
     menu.style.transform = "translateY(0)";
   }
 
@@ -21,7 +26,7 @@ window.addEventListener("scroll", () => {
 });
 
 /* =============================
-   SLIDER BIOGRAFÍA
+   SLIDER BIOGRAFÍA (TUYO)
 ============================= */
 const fotosBio = [
   "fotos/tadeo.jpg",

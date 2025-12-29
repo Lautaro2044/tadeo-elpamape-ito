@@ -83,13 +83,7 @@ header p {
 }
 
 /* =========================
-   MENU DE NAVEGACIÓN (FIX)
-========================= */
-/* =========================
-   MENU HORIZONTAL FIJO
-========================= */
-/* =========================
-   MENU HORIZONTAL RESPONSIVE
+   MENU DESKTOP (default)
 ========================= */
 .menu {
   position: fixed;
@@ -97,39 +91,47 @@ header p {
   left: 0;
   right: 0;
   z-index: 1000;
-
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
   backdrop-filter: blur(6px);
 
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 20px;
+  padding: 12px 10px;
 
-  padding: 10px 12px;
-
-  overflow-x: auto;          /* 🔑 scroll horizontal */
-  white-space: nowrap;       /* 🔑 no salto de línea */
+  transition: transform 0.3s ease;
 }
 
-/* Oculta la barra de scroll */
-.menu::-webkit-scrollbar {
-  display: none;
-}
-
-/* Links */
 .menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
-  flex: 0 0 auto;            /* 🔑 no se estiran */
+  font-size: 16px;
 }
 
-/* 📱 Mobile */
+/* =========================
+   MENU CELULAR (VERTICAL)
+========================= */
 @media (max-width: 600px) {
   .menu {
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    width: 100%;
+    padding: 0;
   }
+
+  .menu a {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 15px;
+  }
+}
+
+/* Espacio para que el menú no tape */
+body {
+  padding-top: 70px;
 }
 /* =========================
    SECCIÓN INICIO
