@@ -85,33 +85,39 @@ header p {
 /* =========================
    MENU DE NAVEGACIÓN (FIX)
 ========================= */
+/* =========================
+   MENU HORIZONTAL FIJO
+========================= */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(6px);
+
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 12px 10px;
-  transition: transform 0.3s ease;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 10px 5px;
 }
 
+/* Links del menú */
 .menu a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  padding: 6px 12px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
-
-  .menu a {
-    font-size: 14px;
+/* 📱 CELULAR: SIGUE HORIZONTAL */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 /* =========================
