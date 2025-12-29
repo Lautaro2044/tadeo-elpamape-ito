@@ -215,12 +215,21 @@ h2 { color: var(--color-principal); }
   height: 200px;
 }
 
-.media-box img,
-.media-box video {
+/* Imágenes */
+.media-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+/* Videos */
+.media-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 🔑 NO se deforma */
+  background: black;
+}
+
 
 /* =========================
    PRESENTACIONES / FLYERS
@@ -472,5 +481,6 @@ footer {
     justify-content: center;
   }
 }
+
 
 
