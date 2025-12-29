@@ -27,7 +27,13 @@ body {
   color: var(--texto-claro);
   font-size: 18px;
   line-height: 1.6;
+
 }
+
+body {
+  padding-top: 70px;
+}
+
 
 /* =========================
    ANIMACIONES GENERALES
