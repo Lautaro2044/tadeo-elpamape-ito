@@ -79,6 +79,7 @@ header p {
 /* =========================
    MENU DE NAVEGACIÓN
 ========================= */
+/* Menú principal */
 .menu {
   position: sticky;
   top: 0;
@@ -89,22 +90,22 @@ header p {
   justify-content: center;
   gap: 30px;
   padding: 15px 10px;
+  flex-wrap: wrap; /* 🔑 Permite que los enlaces bajen de línea si no caben */
 }
 
+/* Enlaces del menú */
 .menu a {
-  position: relative;
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s ease, transform 0.3s ease;
+  flex: 1 1 auto; /* 🔑 Hace que los enlaces se distribuyan y ajusten */
+  text-align: center;
+  min-width: 100px; /* Para que no se compriman demasiado */
 }
 
-.menu a:hover {
-  color: var(--color-secundario);
-  transform: translateY(-2px);
-}
-
+/* Subrayado animado */
 .menu a::after {
   content: "";
   position: absolute;
@@ -120,10 +121,19 @@ header p {
   width: 100%;
 }
 
-.menu a:active {
-  transform: scale(0.92);
-}
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column; /* Los enlaces se apilan verticalmente */
+    gap: 10px;
+  }
 
+  .menu a {
+    font-size: 14px;
+    min-width: auto;
+    padding: 10px 0;
+  }
+}
 /* =========================
    SECCIÓN INICIO
 ========================= */
